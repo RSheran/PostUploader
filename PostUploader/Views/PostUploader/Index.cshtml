@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Page/PostUploader.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="page-header" style="margin-top: -10px; margin-left: 2%">
+            <h3>
+                Post Uploading Screen
+                <small>&nbsp;post your thoughts</small>
+            </h3>
+        </div>
+        <div id="form-postupload" class="col-md-12 col-sm-12 col-xs-12">
+            <form class="form-horizontal">
+
+                <div class="row" style="margin-left: 1%">
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <div class="row" style="margin-left: 1%">
+
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <div class="alert alert-danger" id="showError">
+                                    <strong>Error!&nbsp;</strong><span id="ErrorMessage"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-left: 1%">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <textarea id="txtPostContent" type="text" class="form-control" style="width: 100%"
+                                          placeholder="What's on your mind?.. Post it here.." rows="20"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="row" style="margin:2%">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <div style="float: right">
+                                    <button type="button" id="btnResetPost" class="btn btn-large btn-warning" style="margin-right: 10px">
+                                        Reset
+                                    </button>
+
+                                    <button type="button" id="btnUploadPost" class="btn btn-large btn-primary">
+                                        Post
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <div id="dv-UploadedPost" style="overflow-y:scroll;height:350px;"></div>
+                    </div>
+
+                </div>
+
+                <div id="dvHiddenFields">
+                    <input type="hidden" value=@ViewBag.MaxContentLength id="hdnMaxContentLength" runat="server" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

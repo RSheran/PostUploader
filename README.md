@@ -1,2 +1,2 @@
 # PostUploader
-FrotEnd App  developed using C# and ASP.Net to post phrases to the hate speech detection API
+FrontEnd application using C# and ASP.Net to test the sentiment analysis of uploaded phrases
